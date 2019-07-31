@@ -48,10 +48,14 @@ message TraceConfig {
 
   // The global default max number of link entries per span.
   int64 max_number_of_links = 7;
+
+  // The global default max number of link entries per span.
+  int64 version = 8;
 }
 
 // Sampler that tries to uniformly sample traces with a given probability.
-// The probability of sampling a trace is equal to that of the specified probability.
+// The probability of sampling a trace is equal to that of the specified
+// probability.
 message ProbabilitySampler {
 
   // The desired probability of sampling. Must be within [0.0, 1.0].
